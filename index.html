@@ -122,6 +122,9 @@
   .cta-meta { font: 500 13px/1.5 var(--sans); color: var(--muted); }
   .cta-meta b { color: var(--ink); font-weight: 650; }
   .fineprint { margin-top: 16px; font: 500 12.5px/1.5 var(--mono); color: var(--faint); }
+  .fineprint + .fineprint { margin-top: 6px; }
+  .fineprint a { color: var(--green-bright); text-decoration: underline; text-underline-offset: 2px; }
+  .fineprint code { font: inherit; color: var(--ink); }
 
   /* Floating 3D screen */
   .screen-wrap { perspective: 1000px; }
@@ -448,7 +451,7 @@
           </div>
           <div class="reveal feature">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"/><path d="M3.5 9h17M3.5 15h17M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg></div>
-            <div><h3>Byggd för svenska</h3><p>Testad och trimmad för svenskt tal. Klarar såklart engelska — och byter språk i menyn.</p></div>
+            <div><h3>Byggd för svenska</h3><p>Drivs av KB-Whisper från Kungliga biblioteket, tränad på svenskt tal. Klarar såklart engelska — och byter språk i menyn.</p></div>
           </div>
           <div class="reveal feature" style="transition-delay:.08s">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7 9 18l-5-5"/></svg></div>
@@ -544,13 +547,14 @@
           <h2>Prova <span class="accent">Viska.</span></h2>
           <p class="lede">En liten app i menyraden. Håll höger ⌘ och börja prata.</p>
           <div class="cta-row">
-            <a class="download" href="https://github.com/johnsonaxel-collab/viska/releases/download/v1.0/Viska.dmg">
+            <a class="download" href="https://github.com/johnsonaxel-collab/viska/releases/download/v1.1/Viska.dmg">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
               Ladda ner Viska.dmg
             </a>
-            <div class="cta-meta"><b>~450 MB</b> · Apple&nbsp;Silicon · macOS&nbsp;12+</div>
+            <div class="cta-meta"><b>Version 1.1</b> · 3,5&nbsp;MB · Apple&nbsp;Silicon · macOS&nbsp;12+</div>
           </div>
-          <p class="fineprint">Första gången: högerklicka på Viska → Öppna. Godkänn sedan Mikrofon &amp; Tillgänglighet.</p>
+          <p class="fineprint">Första gången: högerklicka på Viska → Öppna. Godkänn sedan Mikrofon &amp; Tillgänglighet. Viska hämtar talmodellen KB-Whisper (175&nbsp;MB) vid första starten.</p>
+          <p class="fineprint">Vill du att rörigt tal blir färdig text? Installera <a href="https://ollama.com">Ollama</a> och kör <code>ollama pull qwen2.5:7b</code>. Utan Ollama klistrar Viska in texten precis som du sa den.</p>
         </div>
       </section>
 
